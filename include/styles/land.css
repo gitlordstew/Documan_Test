@@ -1,0 +1,174 @@
+@import url('https://fonts.cdnfonts.com/css/lovelo?styles=25962');
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #888;
+    border-radius: 100vh;
+    border: .25em solid transparent;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #696969;
+}
+::-webkit-scrollbar-track{
+    background-color: #ebe9e9;
+}
+.drop{
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+    position: relative;
+    background-color: #ebe9e9;
+}
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hlogo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+.about{
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+}
+
+.login-btn{
+    padding: 14px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #A4E6FF;
+    background-image: linear-gradient(45deg, #5EAEDB 0%, #A4E6FF  51%, #34b4ec  100%);
+}
+.login-btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+.login-btn:active {
+    transform: scale(0.95);
+}
+.content{
+    margin-top: 13%;
+    max-width: 600px;
+}
+.content h1{
+    font-size: 100px;
+    font-family: 'Lovelo';
+    color: #222;
+    margin-top: 0%;
+    margin-bottom: -5%;
+
+}
+.content p{
+    margin: 50px 0 30px;
+    color: #333;
+}
+.featureimg{
+    width: 800px;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    top: 10%;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer ul{
+    list-style: none;
+}
+.footer{
+ background-color: #222;
+    padding: 70px 0;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #5EAEDB;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-image: linear-gradient(50deg, #256685, #34b4ec);
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: #888;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 8px;
+}
+.social-links img{
+    height: 15px;
+    width: 15px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #888;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffff;
+}
+

@@ -1,0 +1,95 @@
+Computer the informations for the following Networks using the 192.168.0.0 address
+
+NETWORK A 500 PC /23 255.255.254.0
+192.168.0.0 = N.A
+192.168.0.1 = First U.
+192.168.1.254 = L.U
+192.168.1.255 = B.A
+NETWORK B 500 PC /23 255.255.254.0
+192.168.2.0 = N.A
+192.168.2.1 = F
+192.168.3.254 = L
+192.168.3.255 = B.A
+NETWORK C 250 PC /24 255.255.255.0
+192.168.4.0 = N.A
+192.168.4.1 = F
+192.168.4.254 = L
+192.168.4.255 = B.A
+NETWORK D 250 PC /24 255.255.255.0
+192.168.5.0 = N.A
+192.168.5.1 = F
+192.168.5.254 = L
+192.168.5.255 = B
+NETWORK E (For the Connection of Routers) /30 255.255.255.252
+192.168.6.0 = N.A
+192.168.6.1 = F
+192.168.6.2 = L
+192.168.6.3 = B.A
+NETWORK F (For the Connection of Routers) /30 255.255.255.252
+192.168.6.4 = N.A
+192.168.6.5 = F
+192.168.6.6 = L
+192.168.6.7 = B.A
+
+1. Label and Layout your network in the packet tracer
+2. Designate the ip addrress of the devices.
+3. Set the router name for each member of the Group (Surname)
+and set the password for the console and enable command with proper encryption
+4. set the routing protocols for each router
+5. connect the whole network
+
+router 0 to router 2
+router 2 to router 3
+
+
+
+wict 2t
+enable
+config terminal
+hostname PELAYO1 (router name)
+line console 0 
+password cisco123 (for console password)
+login
+exit
+
+config terminal
+enable secret cisco456 (for enabled access)
+exit
+
+(for encryption)
+config terminal
+service password-encryption
+
+(for showing access)
+show running-config
+
+(for saving)
+enabled 
+copy running-config starup-config
+then enter
+or
+write memory
+then enter
+
+()
+//Fa0/3/0 (shortcut name of ports) fast Ethernet
+//gi
+// eth Ethernet
+
+(fa0/0)
+config terminal
+interface fa0/0
+ip address 192.168.0.1 255.255.254.0
+no shutdown
+
+(for routers)
+config terminal 
+interface serial 0/3/0
+ip address 192.168.6.2 255.255.255.252
+config terminal 
+interface serial 0/3/0
+ip address 192.168.6.4 255.255.255.252
+
+(routing protocols)
+config terminal
+ip router 192.168.4.0 255.255.255.0 192.168.6.2 255.255.255.0
